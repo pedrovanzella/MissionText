@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :events
+
   devise_for :users
   get 'pages/home' => 'high_voltage/pages#show', id: 'home'
   # The priority is based upon order of creation: first created -> highest priority.
