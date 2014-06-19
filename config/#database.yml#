@@ -82,6 +82,4 @@ production:
   <<: *default
   database: db
   username: root
-  password: <%= ENV['MISSIONTEXT_DATABASE_PASSWORD'] %>
-  password: 
-  port: 49155
+  password: fuq5TqogM2khd5Rm
