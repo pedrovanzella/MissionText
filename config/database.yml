@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: MissionText_production
-  username: MissionText
-  password: <%= ENV['MISSIONTEXT_DATABASE_PASSWORD'] %>
+  url: postgres://root:fuq5TqogM2khd5Rm@172.17.42.1:49155/db
