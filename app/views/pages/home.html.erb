@@ -1,1 +1,13 @@
 <h1>Mission Text</h1>
+
+<% @events = Event.where('start_time >= ?', Date.today) %>
+
+<% @events.all.each do |event| %>
+    <div>
+	<h2><%= link_to event.name, event %></h2>
+	<strong>Created by:</strong> <%= event.user.email %><br />
+	<strong>Minimum Volunteers:</strong> <%= event.min_volunteers %></br />
+	<strong>Maximum Volunteers:</strong> <%= event.max_volunteers %></br />
+	<strong>Current Volunteers:</strong> <%= event.volunteers.size %></br />
+    </div>
+<% end %>
