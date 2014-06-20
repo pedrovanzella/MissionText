@@ -7,7 +7,7 @@
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @event.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
-  <dd><%= @event.user_id %></dd>
+  <dd><%= @event.user.email %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @event.description %></dd>
   <dt><strong><%= model_class.human_attribute_name(:location) %>:</strong></dt>
@@ -24,6 +24,8 @@
   <dd><%= @event.scheduled_text %></dd>
   <dt><strong><%= model_class.human_attribute_name(:time_to_send_message) %>:</strong></dt>
   <dd><%= @event.time_to_send_message %></dd>
+  <dt><strong>Volunteers:</strong></dt>
+  <dd><%= @event.volunteers.map {|u| u.email } %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

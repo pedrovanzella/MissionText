@@ -36,6 +36,7 @@ gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails", github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
 
+gem "pry-rails"
 gem "pry"
 
 # Use ActiveModel has_secure_password
